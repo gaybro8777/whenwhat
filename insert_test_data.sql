@@ -9,6 +9,6 @@ INSERT INTO dependencies VALUES (2,4);
 
 
 -- all queries that I would like to run
-SELECT id FROM events WHERE tstamp > '2017-11-13'::DATE;
+SELECT id FROM events WHERE scheduled_for > '2017-11-13'::DATE;
 -- Am I allowed to run the retrieved queries fiven their dependencies?
-SELECT d.done FROM events WHERE 
+SELECT d.event_id, e.done FROM events e JOIN dependencies d ON (d.depends_on = e.id)
