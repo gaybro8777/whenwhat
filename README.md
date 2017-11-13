@@ -1,2 +1,2 @@
 # whenwhat
-When to do what?
+## A Simple Scheduling App using PostgreSQL
